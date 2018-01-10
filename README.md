@@ -60,11 +60,11 @@ These steps create a word cloud from job descriptions and get further geodata fr
 ### Making tar files to save/backup stuff:
 Save the code and this file:   Use of github will make this unnecessary ;-)
 
-`tar -cvf WyzPython.tar *.py READ*.txt
-gzip WyzPython.tar`
+`tar -cvf WyzPython.tar *.py READ*.txt`
+`gzip WyzPython.tar`
 
 Save the raw Data and databases:  (not IRS or ZIPs, include csvs)
 
-`tar -cvf WyzData.tar *wyz*.sqlite *.csv WyzAntDaily_Data/*_A.html
-gzip WyzData.tar`
+`tar -cvf WyzData.tar *wyz*.sqlite *.csv WyzAntDaily_Data/*_A.html`
+`gzip WyzData.tar`
 
