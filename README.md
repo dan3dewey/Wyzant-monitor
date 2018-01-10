@@ -15,21 +15,24 @@ e.g. with ZIP code or tutoring subject. A second database table with ZIP code as
 can be used to include other data, for example, from the IRS Income Tax Statistics for a recent year.
 
 In the sqlite database I have three tables: one listing the daily files, one for the cumulative list of jobs,
-and one with information based on ZIP codes.  For this last one, I read in IRS tax return data by ZIP code ( https://www.irs.go/statistics/soi-tax-stats-individual-income-tax-statistics-2015-zip-code-data-soi )
+and one with information based on ZIP codes.  For this last one, I read in IRS tax return data by ZIP code ( https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-2015-zip-code-data-soi )
 and used the numbers of returns in different income ranges to create a number indicating the
 low-income level of a ZIP code (roughly the fraction of incomes <$25k minus the fraction with incomes >$100k.)
 
 The sqlite data can be exported from sqlitebrowser as csv files and read into display software such as Tableau.
+Results from this will be on my Tableau Public page:
+https://public.tableau.com/profile/daniel.dewey#!/ .
 
 # Daily workflow:
 Steps 1 and 2 are all that are required to populate the Jobs database; 
-the ZIP codes in the database are sufficient for Tableau to do geomapping.
+having just the ZIP codes in the database is sufficient for Tableau to do geomapping.
 
 1) Each morning:
-     Download html page of most recent 100 WyzAnt jobs.
-     Use "Save page as..." in Chrome to create a file <datecode>_A.html in dir WyzAnt_Daily/
+     Download html page of the most recent 100 WyzAnt jobs available in my subjects.
+     Use "Save page as..." in Chrome to save to a file, <datecode>_A.html, in the dir WyzAnt_Daily/
 
-2) linux$ python WyzIngest.py
+2) Ingest new files and update job information:
+    linux$ python WyzIngest.py
 
 These steps create a word cloud from job descriptions and get further geodata from the ZIP codes
 (i.e., lat and long) to create a geomap.
