@@ -41,8 +41,7 @@ These steps create a word cloud from job descriptions and get further geodata fr
    Open gword.htm in a browser to see the vizualization.
 
 4) For a geographic map of locations run: linux$ `python WyzGeo.py` ;
-         makes a where_wyz.data file with each line containing
-              "<zipcode>, USA" ;
+         makes a where_wyz.data file with each line containing "zipcode, USA" ;
    run linux$ `python geoload_wyz.py`
                                  to go through where_wyz.data and use Google (100 per day limit)
                                  to get geodata for ZIP codes and save it in geodata_wyz.sqlite.
