@@ -23,8 +23,7 @@ import wyzhelp
 
 # - - - Get the files - - -
 # Daily files directory
-dailydir = ("/home/dd/Documents/Python/Py4E-UMich/Course5_Capstone"+
-            "/WyzAntDaily_Data")
+dailydir = ("WyzAntDaily_Data")
 # Get all appropriate files
 try:
     files = os.listdir(dailydir)

@@ -46,7 +46,7 @@ having the ZIP codes in the database is sufficient for Tableau to do geomapping.
 
 1) Each morning:
      Download html page of the most recent 100 WyzAnt jobs available in my subjects.
-     Use "Save page as..." in Chrome to save to a file, `yyyy-mm-dd_A.html`, in the dir `WyzAnt_Daily/` (an example dir with a few files is included here.)
+     Use "Save page as..." in Chrome to save to a file, `yyyy-mm-dd_A.html`, in the dir `WyzAntDaily_Data/` (an example dir with a few files is included here.)
 
 2) Ingest the new html file(s) and update job information by running:
      `$ python WyzIngest.py`
