@@ -3,8 +3,8 @@
 # Ingest (any new) daily data files into database tables.
 # (If a day is skipped add the post-skip filename to missed_one_before.)
 #
-# update 2018-05-24:
-#  - added kludgy missed_one_berore list to set dayssince value.
+# update 2018-05-30:
+#  - added datetime calculations to determine dayssince, number of days between files.
 #  - some PEP-8 adjustments.
 # update 2018-02-07:
 #  - include wyzadded field in database: the change in wyzidhi values.
